@@ -47,7 +47,7 @@ WORDSUM is a numerical variable, Degree is a categorical variable.
 boxplot(WORDSUM~DEGREE,data=gssDataframe)
 ```
 
-
+Based on the graph above it seems that there is a difference between the average score on the WORDSUM test and the degree someone has.
 
 
 
