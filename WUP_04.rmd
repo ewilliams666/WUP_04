@@ -11,7 +11,7 @@ output:
 require(knitr)
 require(tidyverse)
 require(tigerstats)
-
+require(mosaic)
 ```
 
 # Introduction
@@ -54,6 +54,14 @@ Based on the graph above it seems that there is a difference between the average
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+```{r}
+favstats(WORDSUM~DEGREE,data=gssDataframe)
+```
+
+Based upon the table above it seems that on average the higher the level of DEGREE the higher the average WORDSUM score is. The deviation is not by much but it is present.
+
+
 
 ## Inferential Results
 
