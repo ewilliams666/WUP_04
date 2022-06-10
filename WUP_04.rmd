@@ -73,6 +73,20 @@ summary.aov(model1)
 ```
 The p-vale is 0.000236. Because this value is so low it is safe to say that we can reject the null hypothesis. Meaning that there is a difference between the average WORDSUM score and the level of DEGREE someone has. 
 
+```{r}
+model1 <- aov(WORDSUM~DEGREE,data=gssDataframe)
+summary.aov(model1)
+```
+```{r}
+#we specify the margins starting at the bottom and proceeding clockwise - thus 8.7 is the left side margin to hold the names of the factors
+par(mar = c(3, 15, 2, 2))
+plot(TukeyHSD(model1),las=2)
+```
+
+There is a difference in WORDSUM results between high school-graduate and less than high school-graduate. Both of these categories have results that do not reach zero.
+
+
+
 
 
 # Discussion and Conclusion
